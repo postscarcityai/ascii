@@ -2,7 +2,7 @@
 
 **Audio-reactive ASCII visualizer and art generator.** Turn your browser into a full-screen canvas of generative text art. Pick a pattern, choose your colors, and watch it move.
 
-Part of the [PostScarcity AI](https://github.com/postscarcityai) suite.
+Part of the [PostScarcity AI](https://github.com/postscarcityai) suite of open source repositories.
 
 ---
 
