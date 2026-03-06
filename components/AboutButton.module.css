@@ -1,0 +1,48 @@
+.button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--color-ui-bg);
+  border: 2px solid var(--color-primary-hex);
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 13px;
+  color: var(--color-ui-text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.button:hover {
+  border-color: var(--color-secondary-hex);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 12px rgba(var(--color-primary), 0.2);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.icon {
+  font-weight: bold;
+  font-size: 14px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-primary-hex);
+  border-radius: 50%;
+  font-size: 11px;
+}
+
+.label {
+  font-weight: bold;
+}

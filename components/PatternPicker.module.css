@@ -1,0 +1,88 @@
+.picker {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: var(--color-ui-bg);
+  border: 2px solid var(--color-primary-hex);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(var(--color-primary), 0.2);
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+  max-width: 90vw;
+}
+
+.label {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 16px;
+  color: var(--color-ui-text);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary-hex) rgba(var(--color-primary), 0.2);
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  padding: 2px 0;
+}
+
+.buttons::-webkit-scrollbar {
+  height: 6px;
+}
+
+.buttons::-webkit-scrollbar-track {
+  background: rgba(var(--color-primary), 0.1);
+  border-radius: 3px;
+}
+
+.buttons::-webkit-scrollbar-thumb {
+  background: var(--color-primary-hex);
+  border-radius: 3px;
+}
+
+.buttons::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-hex);
+}
+
+.button {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 14px;
+  padding: 10px 18px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-primary-hex);
+  color: var(--color-ui-text);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  pointer-events: auto;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background: rgba(var(--color-primary), 0.08);
+  border-color: var(--color-secondary-hex);
+  transform: translateY(-1px);
+}
+
+.button.active {
+  background: var(--color-primary-hex);
+  color: white;
+  border-color: var(--color-accent-hex);
+  font-weight: bold;
+}
+
+.button:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,132 @@
+.wrapper {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--color-ui-bg);
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 14px;
+  color: var(--color-ui-text);
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.toggle:hover {
+  border-color: var(--color-secondary);
+  transform: translateY(-1px);
+}
+
+.toggleLabel {
+  font-weight: bold;
+}
+
+.previewDots {
+  display: flex;
+  gap: 4px;
+}
+
+.previewDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.chevron {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.panel {
+  margin-bottom: 8px;
+  padding: 16px;
+  background: var(--color-ui-bg);
+  border: 2px solid var(--color-primary);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: slideUp 0.2s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+}
+
+.swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+  padding: 0;
+  outline: none;
+}
+
+.swatch:hover {
+  transform: scale(1.2);
+  border-color: var(--color-ui-text);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.swatch.selected {
+  border-color: var(--color-ui-text);
+  transform: scale(1.15);
+  box-shadow: 0 0 0 2px var(--color-ui-bg), 0 0 0 4px var(--color-ui-text);
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-ui-text);
+  color: var(--color-ui-bg);
+  font-size: 11px;
+  font-weight: bold;
+  font-family: 'Courier New', 'Courier', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.hint {
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 11px;
+  color: var(--color-ui-text);
+  opacity: 0.6;
+}
